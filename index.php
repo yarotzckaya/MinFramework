@@ -1,9 +1,12 @@
 <?php
-require 'lib/Dev.php';
-require 'core/Router.php';
 
+use core\Router;
 
-$router = new Router;
+spl_autoload_register(function($class) {
+	$path = str_replace('\\', '/', $class . '.php');
+	if(file_exists($path)) {
+		require $path;
+	}
+});
 
-
-echo 'hello, world!';
+$router = new Router();
