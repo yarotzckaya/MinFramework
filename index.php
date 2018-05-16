@@ -1,6 +1,8 @@
 <?php
+require 'lib/Dev.php';
 
 use core\Router;
+use lib\Db;
 
 spl_autoload_register(function($class) {
 	$path = str_replace('\\', '/', $class . '.php');
@@ -9,4 +11,7 @@ spl_autoload_register(function($class) {
 	}
 });
 
+session_start();
+
 $router = new Router();
+$router->run();
