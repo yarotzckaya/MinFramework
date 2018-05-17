@@ -1,6 +1,7 @@
 AddDefaultCharset utf-8
 
 RewriteEngine On
+#AllowOverride All
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond ^(.*)$ index.php
+RewriteRule .* index.php [L]
