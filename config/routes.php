@@ -2,12 +2,17 @@
 
 return [
 
-	'account/login' => [
+	'min' => [
+		'controller' => 'main',
+		'action' => 'index',
+	],
+
+	'min/account/login' => [
 		'controller' => 'account',
 		'action' => 'login',
 	],
 
-	'news/show' => [
+	'min/news/show' => [
 		'controller' => 'news',
 		'action' => 'show',
 	],
