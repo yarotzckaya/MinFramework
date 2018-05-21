@@ -1,6 +1,6 @@
 <?php
 
-namespace min\controllers;
+namespace controllers;
 
 class AccountController
 {
