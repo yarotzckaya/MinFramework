@@ -49,8 +49,18 @@ class Router
 	public function run()
 	{
 		if($this->match()){
-			$controller = 'min\controllers\\'.ucfirst($this->params['controller'].'Controller.php');
-			echo $controller;
+			$path = 'controllers\\'.ucfirst($this->params['controller']).'Controller';
+				if(class_exists($path)){
+					$action = $this->params['action'].'Action';
+					if(method_exists($path, $action)){
+						$controller = new $path;
+						$controller->action();
+					} else {
+						echo "This action not found" . $action;
+					}
+				} else {
+					echo "This controller not found!" . $path;
+				}
 			} else {
 			echo "Маршрут не найден";
 		}
