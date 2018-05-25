@@ -2,7 +2,9 @@
 
 namespace controllers;
 
-class AccountController
+use core\Controller;
+
+class AccountController extends Controller
 {
 	public function loginAction()
 	{
@@ -12,5 +14,6 @@ class AccountController
 	public function registerAction()
 	{
 		echo "I'm register";
+		var_dump($this->route);
 	}
 }

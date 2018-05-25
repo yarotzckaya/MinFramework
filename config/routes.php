@@ -12,6 +12,11 @@ return [
 		'action' => 'login',
 	],
 
+	'min/account/register' => [
+		'controller' => 'account',
+		'action' => 'register',
+	],
+
 	'min/news/show' => [
 		'controller' => 'news',
 		'action' => 'show',
