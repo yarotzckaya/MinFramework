@@ -10,4 +10,9 @@ class MainController extends Controller
 	{
 		echo "Вход";
 	}
+
+	public function contactAction()
+	{
+		echo "Contacts";
+	}
 }

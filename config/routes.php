@@ -7,6 +7,11 @@ return [
 		'action' => 'index',
 	],
 
+	'min/contacts' => [
+		'controller' => 'main',
+		'action' => 'contact',
+	],
+
 	'min/account/login' => [
 		'controller' => 'account',
 		'action' => 'login',
