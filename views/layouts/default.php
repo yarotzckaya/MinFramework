@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-    <?php echo $content; ?>
+    <?php echo 'df'; ?>
 </body>
 </html>

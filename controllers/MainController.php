@@ -8,7 +8,8 @@ class MainController extends Controller
 {
 	public function indexAction()
 	{
-		echo "Вход";
+	    $this->view->render('UKFD');
+		//echo "Вход";
 	}
 
 	public function contactAction()
