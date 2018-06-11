@@ -8,7 +8,7 @@ class AccountController extends Controller
 {
 	public function loginAction()
 	{
-		echo "I'm login functon";
+		$this->view->render('Main page');
 	}
 
 	public function registerAction()
