@@ -25,8 +25,12 @@ namespace core;
         } else {
             echo "The view does not found!" . $this->path;
         }
+    }
 
-
+    public static function errorCode($code)
+    {
+        http_response_code($code);
+        require 'views/errors/'.$code.'.php';
     }
 
 }

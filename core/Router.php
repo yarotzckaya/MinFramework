@@ -56,13 +56,13 @@ class Router
 						$controller = new $path($this->params);
 						$controller->$action();		// When I've tryied to write like $controller->action(); it didn't work. WHY???
 					} else {
-						echo "This action not found" . $action;
+						View::errorCode(404);
 					}
 				} else {
-					echo "This controller not found!" . $path;
+                    View::errorCode(404);
 				}
 			} else {
-			echo "Маршрут не найден";
+            View::errorCode(404);
 		}
 	}
 
