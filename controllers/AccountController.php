@@ -13,7 +13,7 @@ class AccountController extends Controller
 
 	public function registerAction()
 	{
-		echo "I'm register";
-		var_dump($this->route);
+	    $this->view->path = 'account/register';
+		$this->view->render('REG');
 	}
 }
