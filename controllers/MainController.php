@@ -8,7 +8,13 @@ class MainController extends Controller
 {
 	public function indexAction()
 	{
-	    $this->view->render('Min framework');
+	    $vars = [
+	        'name' => 'Вася Пукин',
+            'age' => 40,
+            'array' => [1, 2, 3]
+        ];
+
+	    $this->view->render('Min framework', $vars);
 		//echo "Вход";
 	}
 

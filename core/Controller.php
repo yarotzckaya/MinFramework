@@ -15,4 +15,7 @@ abstract class Controller
 		$this->before();
 	}
 
+	public function before(){}
+
+
 }

@@ -16,6 +16,7 @@ namespace core;
 
     public function render($title, $vars = [])
     {
+        extract($vars);                                          // extracts the $vars parameter with the data for view
         if(file_exists('views/'.$this->path.'.php')) {
             ob_start();
             require 'views/'.$this->path.'.php';
