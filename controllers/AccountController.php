@@ -14,6 +14,7 @@ class AccountController extends Controller
 
 	public function loginAction()
 	{
+	   // $this->view->redirect('/min');    // if we need to make a redirect from a route - do it in this way
 		$this->view->render('Main page');
 	}
 
