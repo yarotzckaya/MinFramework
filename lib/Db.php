@@ -21,7 +21,18 @@ class Db
     public function query($sql)
     {
         $query = $this->db->query($sql);
-        $result = $query->fetchAll();
-        print_r($result);
+        return $query;
+    }
+
+    public function row($sql)
+    {
+        $result = $this->query($sql);
+        return $result->fetchAll();
+    }
+
+    public function column($sql)
+    {
+        $result = $this->query($sql);
+        return $result->fetchColumn();
     }
 }
