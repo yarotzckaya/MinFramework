@@ -3,19 +3,16 @@
 namespace controllers;
 
 use core\Controller;
+use lib\Db;
 
 class MainController extends Controller
 {
 	public function indexAction()
 	{
-	    $vars = [
-	        'name' => 'Вася Пукин',
-            'age' => 40,
-            'array' => [1, 2, 3]
-        ];
+	   $db = new DB;
+	   $db->query('SELECT * FROM users');
+	    $this->view->render('Min framework', $db);
 
-	    $this->view->render('Min framework', $vars);
-		//echo "Вход";
 	}
 
 	public function contactAction()
