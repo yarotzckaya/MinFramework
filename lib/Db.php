@@ -18,21 +18,37 @@ class Db
      * @param $sql
      * Protects from SQL-injections.
      */
-    public function query($sql)
+    public function query($sql, $params = [])
     {
-        $query = $this->db->query($sql);
-        return $query;
+        $statement = $this->db->prepare($sql);
+         if (!empty($params)) {
+             foreach ($params as $key => $val) {
+              $statement->bindValue(':'.$key, $val);
+              }
+         }
+
+      $statement->execute();
+        return $statement;
     }
 
-    public function row($sql)
+    /**
+     * @param $sql
+     * @return mixed
+     */
+    public function row($sql, $params = [])
     {
-        $result = $this->query($sql);
+        $result = $this->query($sql, $params);
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function column($sql)
+    /**
+     * @param $sql
+     * @param array $params
+     * @return mixed
+     */
+    public function column($sql, $params = [])
     {
-        $result = $this->query($sql);
+        $result = $this->query($sql, $params);
         return $result->fetchColumn();
     }
 }

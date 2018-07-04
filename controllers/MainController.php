@@ -11,11 +11,15 @@ class MainController extends Controller
 	{
 	   $db = new DB;
 
-	   $form = 1;
+	 //  $form = '2';   if somebody change this line on $form = '2; DELETE FROM users' - the SQL-injection will work. To avoid injection, use prepared requests - PDO::prepare
 
-	   $data = $db->column('SELECT login FROM users WHERE id = '.$form);
+        $params = [
+            'id' => 2,
+        ];
+
+	   $data = $db->column('SELECT login FROM users WHERE id = :id', $params);
 	   debug($data);
-	    $this->view->render('Min framework', $db);
+	    $this->view->render('MAIN PAGE');
 
 	}
 
