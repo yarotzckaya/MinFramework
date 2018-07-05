@@ -1,7 +1,7 @@
-<form>
+<form action="../account/login" method="post">
     <p>FORM LOGIN</p>
     <input type="text" name="name">
-    <p>FORM PASSWORD</p>
+    <p>PASSWORD</p>
     <input type="password" name="password">
-    <b><button>Register</button></b>
+    <b><button type="submit">Вход</button></b>
 </form>
