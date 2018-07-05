@@ -17,7 +17,7 @@ class AccountController extends Controller
 	   // $this->view->redirect('/min');    // if we need to make a redirect from a route - do it in this way
 
         if(!empty($_POST)) {
-           $this->view->redirect('register');
+           $this->view->redirect('/min');
         }
 		$this->view->render('Main page');
 	}
