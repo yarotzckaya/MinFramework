@@ -10,6 +10,9 @@ class MainController extends Controller
 	public function indexAction()
 	{
 	    $result = $this->model->getNews();
+	    $vars = [
+	        'news' => $result,
+        ];
 
 //	   $db = new DB;
 //
@@ -21,7 +24,7 @@ class MainController extends Controller
 //
 //	   $data = $db->column('SELECT login FROM users WHERE id = :id', $params);
 //	   debug($data);
-	    $this->view->render('MAIN PAGE');
+	    $this->view->render('MAIN PAGE', $vars);
 
 	}
 
