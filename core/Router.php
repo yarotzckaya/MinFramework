@@ -1,6 +1,6 @@
 <?php
 /**
-The main class which handle the URL-requests, explodes them and find 
+The main class which handles all URL-requests, explodes them and find
 a controller and action from the URL.
 */
 
@@ -43,6 +43,7 @@ class Router
 		return false;
 	}
 
+
 	/**
 	* Run the exploding of the request
 	*/
@@ -54,7 +55,7 @@ class Router
 					$action = $this->params['action'].'Action';
 					if(method_exists($path, $action)){
 						$controller = new $path($this->params);
-						$controller->$action();		// When I've tryied to write like $controller->action(); it didn't work. WHY???
+						$controller->$action();
 					} else {
 						View::errorCode(404);
 					}
@@ -65,6 +66,5 @@ class Router
             View::errorCode(404);
 		}
 	}
-
 
 }

@@ -1,4 +1,7 @@
 <?php
+/**
+ * All routes
+ */
 
 return [
 

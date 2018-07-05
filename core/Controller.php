@@ -23,7 +23,6 @@ abstract class Controller
 
 	}
 
-	//public function before(){}
 
     /**
      * @param $name
@@ -35,8 +34,8 @@ abstract class Controller
         if(class_exists($path)) {
             return new $path();
         }
-
     }
+
 
     /**
      * @return bool
@@ -58,6 +57,7 @@ abstract class Controller
 
         return false;
     }
+
 
     /**
      * @param $key

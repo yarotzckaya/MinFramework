@@ -1,7 +1,8 @@
 <form>
-    <p>FORM REGISTER</p>
+    <h1>Register</h1>
+    <p>Login</p>
     <input type="text" name="name">
-    <p>FORM PASSWORD</p>
+    <p>Password</p>
     <input type="password" name="password">
     <b><button>Register</button></b>
 </form>

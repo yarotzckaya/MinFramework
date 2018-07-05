@@ -14,6 +14,7 @@ class Db
         $this->db = new PDO("mysql:host=".$config['host'].";dbname=".$config['dbname'].";charset=utf8","root","");
 	}
 
+
     /**
      * @param $sql
      * Protects from SQL-injections.
@@ -31,6 +32,7 @@ class Db
         return $statement;
     }
 
+
     /**
      * @param $sql
      * @return mixed
@@ -40,6 +42,7 @@ class Db
         $result = $this->query($sql, $params);
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     /**
      * @param $sql

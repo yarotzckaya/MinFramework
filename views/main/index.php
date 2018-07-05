@@ -1,5 +1,5 @@
 
-<p>Main page - главная страница</p>
+<p>Main page</p>
 
 <?php foreach ($news as $new): ?>
     <p><?php echo $new['title']; ?></p>
