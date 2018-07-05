@@ -43,4 +43,14 @@ namespace core;
         header('location: '.$url);
         exit;
     }
+
+    public function message($status, $message)
+    {
+        exit(json_encode(['status' => $status, 'message' => $message]));
+    }
+
+    public function location($url)
+    {
+        exit(json_encode(['url' => $url]));
+    }
 }

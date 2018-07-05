@@ -3,5 +3,5 @@
     <input type="text" name="name">
     <p>PASSWORD</p>
     <input type="password" name="password">
-    <b><button type="submit">Вход</button></b>
+    <b><button type="submit" name="enter">Вход</button></b>
 </form>
