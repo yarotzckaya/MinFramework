@@ -13,11 +13,8 @@ use core\Model;
 class Main extends Model
 {
 
-    /**
-     * Main constructor.
-     */
-    public function __construct()
+    public function getNews()
     {
-        echo 'MODEL WORKS';
+        debug($this->db);
     }
 }

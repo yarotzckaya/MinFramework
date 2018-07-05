@@ -4,10 +4,13 @@ namespace controllers;
 
 use core\Controller;
 
+
 class MainController extends Controller
 {
 	public function indexAction()
 	{
+	    $result = $this->model->getNews();
+
 //	   $db = new DB;
 //
 //	 //  $form = '2';   if somebody change this line on $form = '2; DELETE FROM users' - the SQL-injection will work. To avoid injection, use prepared requests - PDO::prepare
