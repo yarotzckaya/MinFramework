@@ -7,7 +7,11 @@ use core\Controller;
 
 class MainController extends Controller
 {
-	public function indexAction()
+
+    /**
+     * Returns Main Page
+     */
+    public function indexAction()
 	{
 	    $result = $this->model->getNews();
 	    $vars = [
@@ -18,8 +22,4 @@ class MainController extends Controller
 
 	}
 
-	public function contactAction()
-	{
-		echo "Contacts";
-	}
 }
